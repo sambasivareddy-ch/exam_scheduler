@@ -1,0 +1,40 @@
+.button {
+    width: 200px;
+    padding: 10px;
+
+    outline: none;
+    border: solid 1px var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+
+    background-color: var(--secondary-color);
+    color: var(--white-shade);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: var(--white-shade);
+    color: var(--secondary-color);
+}
+
+.button-link {
+    text-decoration: none;
+    color: var(--black-shade);
+}
+
+.button:hover .button-link {
+    color: var(--secondary-color);
+}
+
+.nav-button {
+    padding: 10px;
+    border: none;
+    font-family: var(--font-family);
+}
+
+.nav-button:hover .button-link {
+    color: var(--secondary-color);
+}

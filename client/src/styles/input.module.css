@@ -1,0 +1,14 @@
+.input-label {
+    font-family: var(--font-family);
+}
+
+.input-label input {
+    padding: 5px;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--black-color);
+}
+
+.input-label {
+    align-items: center;
+}
