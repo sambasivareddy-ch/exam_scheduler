@@ -1,0 +1,11 @@
+GET http://localhost:8080/get-depts
+
+###
+
+POST http://localhost:8080/create-admin
+content-type: application/json
+
+{
+    "email": "ssrchinta.24@gmail.com",
+    "password": "sambaChinta@123"
+}
