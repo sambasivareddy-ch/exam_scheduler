@@ -5,7 +5,7 @@
 
 import postgres from "pg";
 
-import { createTables } from "./configdb.js";
+import { createTables } from "./config_tables.js";
 
 const { Client } = postgres
 

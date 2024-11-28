@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgreSQLInstance:
+    image: postgres 
+    restart: unless-stopped 
+    env_file:
+      - ./.env 
+    environment:
+      - POSTGRES_USER=$PG_DB_USER
+      - POSTGRES_PASSWORD=$PG_DB_PASSWORD
+      - POSTGRES_DB=PG_DB_NAME
+    ports:
+      - $POSTGRESDB_LOCAL_PORT:$PG_DB_PORT
+    volumes:
+      - db:/var/lib/postgres
+  app:
+    depends_on:
+      - postgreSQLInstance
+    build: ./app 
+    restart: unless-stopped
+    env_file:
+      - ./.env 
+    ports:
+      - $NODE_LOCAL_PORT:8900
+    environment:
+      - name=value
+volumes:
